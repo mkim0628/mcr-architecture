@@ -1,4 +1,4 @@
 {
-  "agentk.architectureDirectory": "count/arch",
-  "agentk.sourceDirectory": "count/src",
+  "agentk.architectureDirectory": "mcr/arch",
+  "agentk.sourceDirectory": "mcr/src",
 }

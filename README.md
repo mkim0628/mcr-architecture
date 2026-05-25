@@ -19,14 +19,14 @@ AgentK는 소프트웨어 아키텍처 구조 설계 활동을 지원하는 에�
 
 ```json
 {
-  "agentk.architectureDirectory": "count/arch",
-  "agentk.sourceDirectory": "count/src"
+  "agentk.architectureDirectory": "mcr/arch",
+  "agentk.sourceDirectory": "mcr/src"
 }
 ```
 
 **설정 항목 설명**:
-- `agentk.architectureDirectory`: 구조 설계 문서가 저장될 디렉토리 (예: `count/arch`)
-- `agentk.sourceDirectory`: 생성된 소스 코드가 저장될 디렉토리 (예: `count/src`)
+- `agentk.architectureDirectory`: 구조 설계 문서가 저장될 디렉토리 (예: `mcr/arch`)
+- `agentk.sourceDirectory`: 생성된 소스 코드가 저장될 디렉토리 (예: `mcr/src`)
 
 ### 2. 구조 설계 활동 수행
 
