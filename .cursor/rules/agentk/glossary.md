@@ -29,6 +29,20 @@
 ### Deployment Architecture (실행 동작 구조)
 런타임 관점에서 본 시스템 구조. 실행 프로세스, 노드, 네트워크 구성 등을 포함함.
 
+### Design Point (설계 포인트, 설계 결정 지점)
+아키텍처상 반드시 결정을 내려야 하는 쟁점. 그냥 구현하면 되는 것이 아니라 구조적 선택이 강제되고, 그 선택이 시스템 전체 품질에 영향을 주는 지점을 의미함. 측정 가능한 품질 요구사항(QAS)이 확정된 직후 ~ 구조 결정(전술/패턴 선택) 직전에 도출됨.
+
+**도출 기준** (하나 이상 해당):
+- 품질 속성 간 트레이드오프(Trade-off)가 발생하는 곳
+- 영향 범위(Impact)가 큰 곳 (여러 컴포넌트에 파급)
+- 되돌리기 어려운(Irreversible) 결정
+- 위험/불확실성(Risk)이 높은 곳
+
+**특징**:
+- 설계 포인트는 "질문(쟁점)"이며, "답(결정)"은 후보 구조(Candidate Architecture)에서 내려짐
+- Phase 8(구조 평가)에서 Sensitivity Point / Trade-off Point / Risk 점검의 기준이 됨
+- Architectural Decision(구조적 의사결정)이 답이라면, Design Point는 그 답을 요구하는 질문에 해당함
+
 ### Domain Model (도메인 모델)
 기능적 요구사항을 분석하여 도출된 기능적이고 개념적인 구조. 핵심 도메인 개념과 그들 간의 관계를 표현함.
 
@@ -116,6 +130,11 @@
 - 예시: `CA-001-사용자-등록-서비스-분할.md`, `CA-002-결재-시스템-추상화.md`
 - 번호: 3자리 숫자 (001부터 시작)
 
+#### Design Point
+- 형식: `DP-{번호}-{제목}.md`
+- 예시: `DP-001-KV캐시-배치-전략.md`, `DP-002-연산-오프로딩-경계.md`
+- 번호: 3자리 숫자 (001부터 시작)
+
 ### ID 참조 규칙
 
 문서 내에서 다른 항목을 참조할 때:
@@ -124,6 +143,7 @@
 - Non-Functional Requirement 참조: `NFR-001`
 - Quality Attribute 참조: `QA-001`
 - Candidate Architecture 참조: `CA-001`
+- Design Point 참조: `DP-001`
 
 ## 약어 목록
 
@@ -133,3 +153,4 @@
 - **QS**: Quality Scenario (품질 시나리오)
 - **CA**: Candidate Architecture (후보 아키텍처)
 - **AD**: Architectural Decision (구조적 의사결정)
+- **DP**: Design Point (설계 포인트, 설계 결정 지점)

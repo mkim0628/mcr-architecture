@@ -15,6 +15,8 @@ Phase 3: 도메인 모델 정립
     ↓
 Phase 4: 품질 요구사항 선정
     ↓
+[전환] 설계 포인트 도출  (Phase 4 → Phase 5 브릿지)
+    ↓
 Phase 5: 후보 구조 설계
     ↓
 Phase 6: 최종 구조 설계
@@ -159,6 +161,35 @@ Phase 8: 구조 평가
 - [ ] qualities.md 작성 완료
 - [ ] NFR 허용치가 명확함
 - [ ] QA 우선 순위가 명확함
+
+---
+
+## [전환] 설계 포인트 도출 (Phase 4 → Phase 5 브릿지)
+
+**목적**: 확정된 측정 가능한 요구(QAS)로부터, 구조적 선택이 강제되는 설계 결정 지점(Design Point)을 도출
+
+**위치**: 요구사항을 정량화하기 전이면 너무 모호해서 못 뽑고, 구조를 다 정한 뒤면 이미 늦으므로, **품질 요구사항(QAS)이 확정된 직후 ~ 구조 결정(전술/패턴 선택) 직전**에 수행하는 분석 활동
+
+### design-point-deriver
+- **입력**: `qualities.md`, `quality/QS-nnn.md`, `domain/model.md`, `usecases.md`(핵심 ASR), `system.md`(제약)
+- **출력**: `design-point/design-points.md`
+- **활동**:
+  - 품질 요구사항·품질 시나리오·핵심 기능 시나리오 간 구조적 긴장(tension) 식별
+  - 도출 기준(Trade-off / Impact / Irreversible / Risk) 적용하여 설계 포인트 선별 (과다 도출 금지)
+  - 각 설계 포인트를 "결정해야 할 질문" 형태로 프레이밍 (답은 정하지 않음)
+  - 요구사항 → 설계 포인트 추적 매트릭스 작성
+  - Sensitivity / Trade-off / Risk 분류
+
+**체크포인트**:
+- [ ] design-point/design-points.md 작성 완료
+- [ ] 각 설계 포인트가 도출 기준 중 하나 이상에 부합
+- [ ] 설계 포인트가 "질문"으로 프레이밍됨 (구조 결정은 Phase 5로 위임)
+- [ ] 핵심 ASR Use Case와 NFR/우선순위 높은 QA가 추적됨
+
+**후속 연결**:
+- Phase 5(후보 구조 설계)의 "문제 식별(Problem Identification)" 입력으로 사용됨
+- 각 설계 포인트는 Phase 5에서 후보 구조(CA-nnn)로 해결되고, Phase 6 `decision/decisions.md`에서 채택됨 (추적: DP → CA → decision)
+- Phase 8(구조 평가)에서 Sensitivity / Trade-off / Risk 점검의 기준이 됨
 
 ---
 
@@ -354,6 +385,10 @@ Phase 8: 구조 평가
 │   ├── evaluations.md           # 품질 시나리오 평가
 │   ├── QS-001-{title}.md        # 개별 품질 시나리오 명세
 │   ├── QS-002-{title}.md
+│   └── ...
+├── design-point/                # 설계 포인트 (Phase 4 → 5 브릿지)
+│   ├── design-points.md         # 설계 포인트 목록 + 상세 + 추적 매트릭스
+│   ├── DP-001-{title}.md        # 개별 설계 포인트 상세 (선택적)
 │   └── ...
 ├── candidate/                   # 후보 구조
 │   ├── candidates.md            # 후보 구조 목록

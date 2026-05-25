@@ -51,6 +51,9 @@ AgentK는 소프트웨어 아키텍처 구조 설계 활동을 지원하는 에�
 - `evaluate-scenarios`: 품질 시나리오 평가 (`quality/evaluations.md` 생성)
 - `select-scenarios`: 품질 요구사항 선정 (`qualities.md` 생성)
 
+**[전환] 설계 포인트 도출** (Phase 4 → Phase 5 브릿지)
+- `derive-design-points`: 설계 결정 지점 도출 (`design-point/design-points.md` 생성)
+
 **Phase 5: 후보 구조 설계** (`candidate/candidates.md` 생성)
 - `design-performance`: 성능 관련 후보 구조 설계 (`candidate/QS-nnn-{title}.md` 생성)
 - `design-modifiability`: 변경 용이성 관련 후보 구조 설계 (`candidate/QS-nnn-{title}.md` 생성)
@@ -99,6 +102,10 @@ AgentK는 소프트웨어 아키텍처 구조 설계 활동을 지원하는 에�
     /agentk/specify-scenario QS-001의 상세 명세를 작성해줘.
     /agentk/evaluate-scenarios 품질 시나리오를 평가해줘.
     /agentk/select-scenarios 품질 요구사항을 선정해줘.
+    ```
+   **[전환] 설계 포인트 도출** - 구조적 선택이 강제되는 결정 지점 도출
+    ```
+    /agentk/derive-design-points 품질 요구사항과 도메인 모델을 분석해서 설계 포인트를 도출해줘.
     ```
 5. **Phase 5: 후보 구조 설계[동작 측면]** - 채택 가능한 후보 구조 설계
     ```

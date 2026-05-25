@@ -9,7 +9,7 @@
 - **활동 집중**: 각 에이전트는 자신의 책임 범위에만 집중하고, 다른 활동은 해당 에이전트에게 위임
 - **단계별 수행**: 응답 길이 제한 회피를 위해 복잡한 작업은 반드시 단계별로 분할
 - **Mermaid 다이어그램**: 모든 다이어그램은 Mermaid 문법 사용 (`graph TD`, `sequenceDiagram` 등)
-- **ID 형식 준수**: UC-001, QS-001, CA-001, AD-001, NFR-001, QA-001 형식 사용
+- **ID 형식 준수**: UC-001, QS-001, CA-001, AD-001, DP-001, NFR-001, QA-001 형식 사용
 
 ## 작업 디렉토리 규칙
 
@@ -25,6 +25,7 @@ Phase 2: 기능 명세        → /agentk/extract-usecases, /agentk/specify-usec
 Phase 3: 도메인 모델 정립 → /agentk/design-domain
 Phase 4: 품질 요구사항 선정 → /agentk/elicit-scenarios, /agentk/specify-scenario,
                               /agentk/evaluate-scenarios, /agentk/select-scenarios
+ [전환] 설계 포인트 도출   → /agentk/derive-design-points   (Phase 4 → 5 브릿지)
 Phase 5: 후보 구조 설계   → /agentk/design-performance, /agentk/design-modifiability,
                               /agentk/design-msa, /agentk/design-packages,
                               /agentk/select-frameworks, /agentk/select-solutions
@@ -46,6 +47,7 @@ docs/
 ├── usecase/               # Phase 2: UC-nnn 상세 명세
 ├── domain/                # Phase 3: 도메인 모델 (model.md, UC-nnn.md)
 ├── quality/               # Phase 4: 품질 시나리오 (scenarios.md, QS-nnn.md, evaluations.md)
+├── design-point/          # Phase 4→5 브릿지: 설계 포인트 (design-points.md, DP-nnn.md)
 ├── candidate/             # Phase 5: 후보 구조 (candidates.md, 관심사별 파일)
 ├── decision/              # Phase 6: 설계 결정 (decisions.md, evaluations.md)
 ├── architecture/          # Phase 6: 최종 구조 (deployment.md, module.md)
