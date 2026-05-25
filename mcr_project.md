@@ -35,6 +35,10 @@ CXL-PNM 활용 LLM 가속 연구
 * QEMU 활용 Future CXL Switch w/ CXL-PNM 에뮬레이션 환경 확보
 * Future 가속 시스템 성능 평가 환경 구성
 * 가속 알고리즘 도출 및 검증
+4. PIM-SSD 기반 Retrieving 가속 연구
+* PIM-SSD 활용 대용량 데이터 검색(Retrieving) 연산 In-Storage 가속
+* 검색 연산의 PIM-SSD Offloading을 통한 데이터 이동 비용 최소화
+* 가속 알고리즘 도출 및 검증
 
 ### 2.3 Tiered-Memory 최적화
 [연구 내용]
